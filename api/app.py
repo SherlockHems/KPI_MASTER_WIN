@@ -14,6 +14,10 @@ import traceback
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/api/test')
+def test():
+    return {"message": "API is working"}
+
 # Load data
 start_date = datetime.date(2023, 12, 31)
 end_date = datetime.date(2024, 6, 30)
